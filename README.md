@@ -10,10 +10,10 @@
 
 ```bash
 # linux / macOS
-python3 -m pip install pycord-i18n
+pip3 install pycord-localizer
 
 # windows
-python -m pip install pycord-i18n
+pip install pycord-localizer
 ```
 
 ## Quick Start
