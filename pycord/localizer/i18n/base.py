@@ -4,8 +4,8 @@ from typing import Dict, Union
 from ..types import (
     CommandLocalization,
     ContextMenuLocalization,
-    Localizable,
     Locale,
+    Localizable,
 )
 
 __all__ = ("BaseLocalizer",)

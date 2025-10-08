@@ -4,7 +4,7 @@ from typing import Any, Literal, Union
 
 from discord import MISSING, Option
 
-from .types import Localizable, Locale
+from .types import Locale, Localizable
 
 __all__ = (
     "add_localization",
