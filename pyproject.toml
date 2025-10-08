@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pycord-localizer"
 dynamic = ["version"]
-description = "Comprehensive internationalization (i18n) for Pycord."
+description = "A pycord extension for internationalization and localization.."
 readme = "README.md"
 license = {text = "MIT"}
 authors = [

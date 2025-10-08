@@ -106,7 +106,7 @@ if readme_file.exists():
         long_description = f.read()
     long_description_content_type = "text/markdown"
 else:
-    long_description = "Comprehensive internationalization (i18n) for Pycord."
+    long_description = "A pycord extension for internationalization and localization.."
     long_description_content_type = "text/plain"
 
 setuptools.setup(
@@ -114,7 +114,7 @@ setuptools.setup(
     version=version,
     author="ParrotXray",
     author_email="",
-    description="Comprehensive internationalization (i18n) for Pycord",
+    description="A pycord extension for internationalization and localization.",
     long_description=long_description,
     long_description_content_type=long_description_content_type,
     url="https://github.com/ParrotXray/pycord-localizer",

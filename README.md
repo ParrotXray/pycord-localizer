@@ -4,7 +4,7 @@
 [![Python versions](https://img.shields.io/pypi/pyversions/pycord-localizer.svg)](https://pypi.org/project/pycord-localizer/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Comprehensive internationalization (i18n) library for Pycord**
+**A pycord extension for internationalization and localization.**
 
 ## Installation
 
