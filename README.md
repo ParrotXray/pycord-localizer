@@ -53,7 +53,7 @@ Create JSON files for each language you want to support:
 ```python
 import json
 from discord import Bot, Option
-from pycord_localizer import I18n, _
+from pycord_localizer import I18n, t
 
 # Load localization files
 with open("zh-TW.json", encoding="utf-8") as f:
@@ -70,7 +70,7 @@ i18n = I18n(bot, zh_TW=zh_tw, ja=ja)
 @i18n.localize
 @bot.slash_command()
 async def greet(ctx, user: Option(discord.Member, "Select a user")):
-    await ctx.respond(_("Hello, {0}!", user.mention))
+    await ctx.respond(t("Hello, {0}!", user.mention))
 
 bot.run("YOUR_TOKEN")
 ```

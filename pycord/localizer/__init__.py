@@ -4,7 +4,7 @@ pycord-quart - A comprehensive internationalization (i18n) library for Pycord
 
 from typing import NamedTuple
 
-from .core import I18n, _
+from .core import I18n, t
 from .types import (
     ChoiceLocalization,
     CommandLocalization,
@@ -32,7 +32,7 @@ version_info = __version_info__
 __all__ = (
     # Core
     "I18n",
-    "_",
+    "t",
     # Types
     "Locale",
     "ChoiceLocalization",

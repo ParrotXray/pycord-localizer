@@ -12,7 +12,7 @@ from .types import (
 )
 from .utils import normalize_locale
 
-__all__ = ("I18n", "_")
+__all__ = ("I18n", "t")
 
 
 class I18n:
@@ -178,4 +178,4 @@ class I18n:
 
 
 # Convenience function for translations
-_ = I18n.get_text
+t = I18n.get_text
