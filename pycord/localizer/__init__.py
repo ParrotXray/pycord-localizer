@@ -23,8 +23,8 @@ class _VersionInfo(NamedTuple):
     serial: int
 
 
-__version__ = "0.1.1"
-__version_info__ = _VersionInfo(0, 1, 1, "final", 0)
+__version__ = "0.1.2"
+__version_info__ = _VersionInfo(0, 1, 2, "final", 0)
 
 version = __version__
 version_info = __version_info__
