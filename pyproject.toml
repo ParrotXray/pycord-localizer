@@ -1,0 +1,142 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pycord-localizer"
+dynamic = ["version"]
+description = "Comprehensive internationalization (i18n) for Pycord."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "ParrotXray"},
+]
+keywords = ["discord", "pycord", "i18n", "internationalization", "localization", "l10n"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: AsyncIO",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Communications",
+    "Topic :: Internet",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Networking",
+    "Typing :: Typed",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "aiohttp",
+    "typing-extensions;python_version<'3.11'",
+    "py-cord",
+]
+
+[project.optional-dependencies]
+docs = [
+    "sphinx",
+    "sphinx-rtd-theme",
+    "sphinxcontrib-trio",
+]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "mypy",
+    "black",
+    "isort",
+    "flake8",
+]
+speed = [
+    "aiohttp[speedups]",
+    "cchardet",
+    "aiodns",
+]
+
+[project.urls]
+Homepage = "https://github.com/ParrotXray/pycord-localizer"
+Repository = "https://github.com/ParrotXray/pycord-localizer"
+"Issue Tracker" = "https://github.com/ParrotXray/pycord-localizer/issues"
+Source = "https://github.com/ParrotXray/pycord-localizer"
+
+[tool.setuptools]
+packages = ["pycord.localizer"]
+include-package-data = true
+zip-safe = false
+
+[tool.setuptools.dynamic]
+version = {attr = "pycord.localizer.__version__"}
+
+
+# Black configuration
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+include = "\\.pyi?$"
+
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+# isort configuration
+[tool.isort]
+profile = "black"
+line_length = 100
+known_first_party = ["pycord"]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+
+# MyPy configuration
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_unreachable = true
+strict_equality = true
+show_error_codes = true
+
+[[tool.mypy.overrides]]
+module = "aiohttp.*"
+ignore_missing_imports = true
+
+# Pytest configuration
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+]

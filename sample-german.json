@@ -1,0 +1,29 @@
+{
+    "strings": {
+        "Hello, this sentence is in English": "Hallo, dieser Satz ist auf Deutsch"
+    },
+    "commands": {
+        "hello": {
+            "name": "hallo",
+            "description": "Sag hallo",
+            "options": {
+                "user": {
+                    "name": "benutzer",
+                    "description": "Ein Benutzer",
+                    "choices": {
+                        "option1": "Option Eins",
+                        "option2": "Option Zwei"
+                    }
+                }
+            }
+        }
+    },
+    "context_menus": {
+        "user_info": {
+            "name": "Benutzerinfo"
+        },
+        "get_message_id": {
+            "name": "Nachrichten-ID abrufen"
+        }
+    }
+}
