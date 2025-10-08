@@ -53,12 +53,10 @@ install_requires = [
     "py-cord",
 ]
 
-packages = [
-    "pycord.localizer",
-]
+packages = setuptools.find_packages(include=["pycord", "pycord.*"])
 
 project_urls = {
-    "Issue Tracker": "https://github.com/ParrotXray/pycord-localizer",
+    "Issue Tracker": "https://github.com/ParrotXray/pycord-localizer/issues",
     "Source": "https://github.com/ParrotXray/pycord-localizer",
 }
 
