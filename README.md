@@ -1,6 +1,7 @@
 # pycord-localizer
 
 [![PyPI version](https://badge.fury.io/py/pycord-localizer.svg)](https://badge.fury.io/py/pycord-localizer)
+[![downloads](https://img.shields.io/pypi/dm/pycord-localizer.svg)](https://pypi.org/project/pycord-localizer/)
 [![Python versions](https://img.shields.io/pypi/pyversions/pycord-localizer.svg)](https://pypi.org/project/pycord-localizer/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
